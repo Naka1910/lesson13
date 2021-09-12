@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Allison';
+    src: url('../fonts/Allison-Regular.eot');
+    src: url('../fonts/Allison-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Allison-Regular.woff2') format('woff2'),
+        url('../fonts/Allison-Regular.woff') format('woff'),
+        url('../fonts/Allison-Regular.ttf') format('truetype'),
+        url('../fonts/Allison-Regular.svg#Allison-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Azeret Mono';
+    src: url('../fonts/Allison-Regular.eot');
+    src: url('../fonts/AzeretMono-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AzeretMono-BlackItalic.woff2') format('woff2'),
+        url('../fonts/AzeretMono-BlackItalic.woff') format('woff'),
+        url('../fonts/AzeretMono-BlackItalic.ttf') format('truetype'),
+        url('..fonts/AzeretMono-BlackItalic.svg#AzeretMono-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+

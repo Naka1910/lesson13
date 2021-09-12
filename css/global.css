@@ -44,32 +44,259 @@ a {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.section__container {
-  width: 1200px;
+@font-face {
+  font-family: 'Allison';
+  src: url("../fonts/Allison-Regular.eot");
+  src: url("../fonts/Allison-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Allison-Regular.woff2") format("woff2"), url("../fonts/Allison-Regular.woff") format("woff"), url("../fonts/Allison-Regular.ttf") format("truetype"), url("../fonts/Allison-Regular.svg#Allison-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Azeret Mono';
+  src: url("../fonts/Allison-Regular.eot");
+  src: url("../fonts/AzeretMono-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AzeretMono-BlackItalic.woff2") format("woff2"), url("../fonts/AzeretMono-BlackItalic.woff") format("woff"), url("../fonts/AzeretMono-BlackItalic.ttf") format("truetype"), url("..fonts/AzeretMono-BlackItalic.svg#AzeretMono-BlackItalic") format("svg");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+.body {
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  background-color: #a9bbb5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.section__title {
-  font-size: 20px;
-  color: red;
-  font-family: "Courier New", Courier, monospace;
+.body {
+  background-color: #c7e6be;
+}
+
+@media (max-width: 800px) {
+  .body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+  }
+}
+
+.body .section__title {
+  font-size: 25px;
+  font-family: "Allison";
   font-weight: bold;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 20px 0;
+  border-radius: 50px;
+  background-color: #dab139;
+  color: #20c997;
 }
 
-.section__text {
-  font-size: 15px;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bolder;
-  color: saddlebrown;
+.body .section__title:hover {
+  position: relative;
+  bottom: 10px;
+  background-color: #a8c5ae;
+  color: #8186c5;
+}
+
+.body .section__title::after {
+  content: " \2728";
+  font-size: 20px;
+}
+
+@media (max-width: 800px) {
+  .body .section__title {
+    max-width: 500px;
+    background-color: #65a685;
+  }
+}
+
+.body .section__container {
+  background-color: #65a685;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50px;
+  padding: 20px 30px;
+}
+
+@media (max-width: 800px) {
+  .body .section__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 500px;
+    background-color: #dab139;
+  }
+}
+
+@media (max-width: 400px) {
+  .body .section__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.body .section__text {
+  font-family: "Azeret Mono";
+  font-style: italic;
+}
+
+.body .section__text::first-line {
+  font-size: 20px;
+  font-family: "Allison";
+}
+
+.body .section__text::first-letter {
+  font-size: 30px;
+  color: #8186c5;
+}
+
+.body .section__text::-moz-selection {
+  background-color: #0dcaf0;
+}
+
+.body .section__text::selection {
+  background-color: #0dcaf0;
+}
+
+@media (max-width: 800px) {
+  .body .section__text {
+    max-width: 300px;
+  }
+}
+
+.body .section__img {
+  width: 50%;
+  opacity: 80%;
+}
+
+.body .footer__title {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+  font-family: "Allison";
+  padding: 20px 0;
+  border-radius: 50px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  background-color: #dab139;
+  color: #20c997;
+}
+
+.body .footer__title:hover {
+  position: relative;
+  bottom: 10px;
+  background-color: #a8c5ae;
+  color: #8186c5;
+}
+
+.body .footer__title::after {
+  content: " \2728";
+  font-size: 20px;
+}
+
+@media (max-width: 800px) {
+  .body .footer__title {
+    max-width: 500px;
+    background-color: #65a685;
+  }
+}
+
+.body .footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #65a685;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 30px;
+  border-radius: 50px;
+}
+
+@media (max-width: 800px) {
+  .body .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    max-width: 500px;
+    background-color: #dab139;
+  }
+}
+
+@media (max-width: 400px) {
+  .body .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.body .footer__block2 {
+  max-width: 350px;
+  display: inline-block;
+}
+
+@media (max-width: 400px) {
+  .body .footer__block2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.body .footer__text {
+  max-width: 350px;
+  line-height: 40px;
+  font-family: "Azeret Mono";
+  opacity: 80%;
+  color: #423a34;
+}
+
+.body .footer__li {
+  margin-bottom: 40px;
+}
+
+.body .footer__li:hover {
+  position: relative;
+  top: 4px;
+}
+
+.body .footer__a {
+  text-decoration: none;
+  color: #423a34;
+  margin-left: 10px;
+}
+
+.body .footer__a:hover {
+  color: #8a3e06;
 }
 /*# sourceMappingURL=global.css.map */

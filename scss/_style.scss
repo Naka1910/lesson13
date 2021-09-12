@@ -1,25 +1,159 @@
-.section {
-  &__container {
-    width: 1200px;
-    margin: 0 auto;
-    background-color: rgb(169, 187, 181);
+.body {
+  background-color: #c7e6be;
+
+  @extend %centering;
+  @media (max-width: $first) {
     display: flex;
-    justify-content: center;
-    align-items:center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
   }
-  &__title {
-    font-size: 20px;
-    color: red;
-    font-family: "Courier New", Courier, monospace;
-    font-weight: bold;
-    display:flex;
-    justify-content: center;
-    margin-bottom: 30px;
+  .section {
+    &__title {
+      font-size: $size;
+      font-family: $allison;
+      font-weight: $bold;
+      text-align: $center;
+      margin-bottom: $margin;
+      width: 100%;
+      padding: 20px 0;
+      border-radius: $border;
+      background-color: $color;
+      color: $color7;
+      &:hover {
+        position: relative;
+        bottom: 10px;
+        background-color: $color4;
+        color: $color2;
+      }
+
+      &::after {
+        content: " \2728";
+        font-size: 20px;
+      }
+      @media (max-width: $first) {
+        max-width: 500px;
+        background-color: $color1;
+      }
+    }
+    &__container {
+      background-color: $color1;
+      display: $display;
+      align-items: $align;
+      border-radius: $border;
+      padding: $padding2;
+      @media (max-width: $first) {
+        flex-direction: column;
+        max-width: 500px;
+        background-color: $color;
+      }
+      @media (max-width:$second) {
+        flex-direction: column-reverse;
+      }
+    }
+    &__text {
+      font-family: $azeret;
+      font-style: $italic;
+      &::first-line {
+        font-size: 20px;
+        font-family: $allison;
+      }
+      &::first-letter {
+        font-size: 30px;
+        color: $color2;
+      }
+      &::selection {
+        background-color: $color3;
+      }
+      @media (max-width: $first) {
+        max-width: 300px;
+      }
+    }
+    &__img {
+      width: 50%;
+      opacity: 80%;
+    }
   }
-  &__text{
-      font-size: 15px;
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: bolder;
-      color: saddlebrown;
+
+  // footer
+
+  .footer {
+    &__title {
+      font-size: $size;
+      font-weight: $bold;
+      text-align: $center;
+      font-style: $italic;
+      font-family: $allison;
+      padding: $padding;
+      border-radius: $border;
+      margin-bottom: $margin;
+      margin-top: $margin;
+      background-color: $color;
+      color: $color7;
+      &:hover {
+        position: relative;
+        bottom: 10px;
+        background-color: $color4;
+        color: $color2;
+      }
+      &::after {
+        content: " \2728";
+        font-size: 20px;
+      }
+      @media (max-width: $first) {
+        max-width: 500px;
+        background-color: $color1;
+      }
+    }
+
+    &__container {
+      display: $display;
+      justify-content: $around;
+      background-color: $color1;
+      align-items: $align;
+      padding: $padding2;
+      border-radius: $border;
+      @media (max-width: $first) {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 500px;
+        background-color: $color;
+      }
+        @media (max-width: $second) {
+          flex-direction: column-reverse;
+        }
+    }
+
+      &__block2 {
+        max-width: $width;
+        display: inline-block;
+        @media (max-width: 400px) {
+          display: flex;
+        }
+      }
+      &__text {
+        max-width: $width;
+        line-height: $size2;
+        font-family: $azeret;
+        opacity: 80%;
+        color: $color6;
+      }
+
+      &__li {
+        margin-bottom: $size2;
+        &:hover {
+          position: relative;
+          top: 4px;
+        }
+      }
+      &__a {
+        text-decoration: none;
+        color: $color6;
+        margin-left: 10px;
+        &:hover {
+          color: $color5;
+        }
+      }
+    }
   }
-}
+
